@@ -35,9 +35,8 @@
 
     <!-- BARRA DE NAVEGACIÓN -->
     <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200 transition-all duration-300">
-        <!-- Aumenté el padding (py-4) y quité la altura fija para que el logo mande en el tamaño -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-            <!-- LOGO: Altura aumentada (h-20 en celu, h-24 en compu) -->
+            <!-- LOGO -->
             <a href="#inicio" class="flex items-center hover:opacity-90 transition">
                 <img src="LOGO.png" alt="Lutmin Consultora" class="h-20 lg:h-24 w-auto object-contain">
             </a>
@@ -46,10 +45,10 @@
             <nav class="hidden lg:flex items-center gap-1 font-semibold text-sm text-lutmin-dark">
                 <a href="#inicio" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Inicio</a>
                 <a href="#nosotros" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Nosotros</a>
-                <a href="#tecnicos" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Técnica e ISO</a>
-                <a href="#gestion" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Gestión</a>
+                <a href="#tecnicos" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Cursos</a>
                 <a href="#campus" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Campus</a>
                 <a href="#talento" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Talento</a>
+                <a href="#faq" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">FAQ</a>
             </nav>
 
             <!-- BOTÓN CTA -->
@@ -63,13 +62,9 @@
         </div>
     </header>
 
-    <!-- 1. SECCIÓN HERO (Fondo corregido a oficina limpia y degradado suave) -->
-    <!-- Agregué pt-32 para compensar que el menú ahora es más alto por el logo -->
+    <!-- 1. SECCIÓN HERO -->
     <section id="inicio" class="relative bg-lutmin-dark text-white min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
-        <!-- Imagen de Oficina moderna y limpia -->
         <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1920&q=80');"></div>
-        
-        <!-- Degradado suave: Más transparente para que no parezca un bloque azul gigante -->
         <div class="absolute inset-0 bg-gradient-to-r from-lutmin-dark/95 via-lutmin-dark/60 to-transparent"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-lutmin-dark via-transparent to-transparent md:hidden"></div>
         
@@ -97,8 +92,44 @@
         </div>
     </section>
 
+    <!-- BARRA DE AUTORIDAD / INDICADORES DE IMPACTO -->
+    <section class="bg-lutmin-light text-white py-8 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+                <p class="text-3xl md:text-4xl font-extrabold">+500</p>
+                <p class="text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Profesionales Capacitados</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-extrabold">+100</p>
+                <p class="text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Empresas Asesoradas</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-extrabold">100%</p>
+                <p class="text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Enfoque Práctico</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-extrabold">24/7</p>
+                <p class="text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Campus Virtual Activo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: ALIANZAS / EMPRESAS QUE CONFIAN -->
+    <section class="py-16 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">Organizaciones y aliados que confían en nuestra trayectoria</p>
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-75">
+                <img src="LOGOADCON.PNG" alt="ADCON" class="h-12 md:h-16 object-contain hover:opacity-100 transition">
+                <img src="LOGOEX.PNG" alt="EX" class="h-12 md:h-16 object-contain hover:opacity-100 transition">
+                <img src="LOGOSE.PNG" alt="SE" class="h-12 md:h-16 object-contain hover:opacity-100 transition">
+                <img src="LOGOWA.PNG" alt="WA" class="h-12 md:h-16 object-contain hover:opacity-100 transition">
+                <img src="LOGOQA.PNG" alt="QA" class="h-12 md:h-16 object-contain hover:opacity-100 transition">
+            </div>
+        </div>
+    </section>
+
     <!-- 2. SECCIÓN NOSOTROS -->
-    <section id="nosotros" class="py-24 bg-white border-b border-gray-100">
+    <section id="nosotros" class="py-24 bg-slate-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Identidad Corporativa</span>
@@ -107,7 +138,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
                     <div class="w-14 h-14 bg-lutmin-dark text-white rounded-2xl flex items-center justify-center text-xl mb-6 shadow-md">
                         <i class="fa-solid fa-bullseye"></i>
                     </div>
@@ -117,7 +148,7 @@
                     </p>
                 </div>
 
-                <div class="bg-slate-50 p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
                     <div class="w-14 h-14 bg-lutmin-light text-white rounded-2xl flex items-center justify-center text-xl mb-6 shadow-md">
                         <i class="fa-solid fa-eye"></i>
                     </div>
@@ -145,38 +176,44 @@
     </section>
 
     <!-- 3. SECCIÓN NORMAS ISO -->
-    <section id="iso" class="py-24 bg-gray-50">
+    <section id="iso" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                 <div class="max-w-2xl">
                     <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Gestión de Calidad</span>
                     <h2 class="text-4xl font-extrabold text-lutmin-dark">Normas ISO</h2>
-                    <p class="mt-4 text-gray-600 text-lg">Programas especializados en sistemas de gestión y auditoría.</p>
+                    <p class="mt-4 text-gray-600 text-lg">Programas especializados en sistemas de gestión y auditoría corporativa.</p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 flex flex-col md:flex-row group border border-gray-100">
+                <div class="bg-slate-50 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 flex flex-col md:flex-row group border border-gray-100">
                     <div class="md:w-2/5 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="ISO 9001" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 min-h-[250px]">
                     </div>
-                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
-                        <span class="text-lutmin-light font-bold text-xs uppercase mb-2">10 Semanas</span>
-                        <h3 class="text-2xl font-bold text-lutmin-dark mb-3">Implementación ISO 9001</h3>
-                        <p class="text-gray-600 mb-6 text-sm">Diseño, implementación y mantenimiento de Sistemas de Gestión de Calidad para la mejora continua.</p>
-                        <a href="#contacto" class="text-lutmin-dark font-bold hover:text-lutmin-light transition">Consultar temario &rarr;</a>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center space-y-3">
+                        <span class="text-lutmin-light font-bold text-xs uppercase">10 Semanas</span>
+                        <h3 class="text-2xl font-bold text-lutmin-dark">Implementación ISO 9001</h3>
+                        <p class="text-gray-600 text-sm">Diseño y mantenimiento de Sistemas de Gestión de Calidad para la mejora continua.</p>
+                        <div class="flex gap-4 text-xs font-semibold text-gray-500 pt-2">
+                            <span><i class="fa-solid fa-laptop text-lutmin-light mr-1"></i> Online / Híbrido</span>
+                            <span><i class="fa-solid fa-certificate text-lutmin-light mr-1"></i> Certificado Oficial</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 flex flex-col md:flex-row group border border-gray-100">
+                <div class="bg-slate-50 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 flex flex-col md:flex-row group border border-gray-100">
                     <div class="md:w-2/5 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80" alt="Auditoría" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 min-h-[250px]">
                     </div>
-                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
-                        <span class="text-lutmin-light font-bold text-xs uppercase mb-2">6 Semanas</span>
-                        <h3 class="text-2xl font-bold text-lutmin-dark mb-3">Auditoría Interna</h3>
-                        <p class="text-gray-600 mb-6 text-sm">Formación de auditores para evaluar procesos corporativos y asegurar el cumplimiento de estándares.</p>
-                        <a href="#contacto" class="text-lutmin-dark font-bold hover:text-lutmin-light transition">Consultar temario &rarr;</a>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center space-y-3">
+                        <span class="text-lutmin-light font-bold text-xs uppercase">6 Semanas</span>
+                        <h3 class="text-2xl font-bold text-lutmin-dark">Auditoría Interna</h3>
+                        <p class="text-gray-600 text-sm">Formación de auditores para evaluar procesos corporativos y asegurar estándares.</p>
+                        <div class="flex gap-4 text-xs font-semibold text-gray-500 pt-2">
+                            <span><i class="fa-solid fa-laptop text-lutmin-light mr-1"></i> Online / Híbrido</span>
+                            <span><i class="fa-solid fa-certificate text-lutmin-light mr-1"></i> Certificado Oficial</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -184,7 +221,7 @@
     </section>
 
     <!-- 4. SECCIÓN CURSOS TÉCNICOS (OFICIOS) -->
-    <section id="tecnicos" class="py-24 bg-white border-t border-gray-100">
+    <section id="tecnicos" class="py-24 bg-slate-50 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                 <div class="max-w-2xl">
@@ -195,40 +232,67 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-2 group border border-gray-100">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80" alt="Refrigeración" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <!-- Refrigeración -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-2 group border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80" alt="Refrigeración" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-lutmin-dark mb-3">Refrigeración y Aire Acondicionado</h3>
+                            <p class="text-gray-600 mb-6 text-sm">Instalación, mantenimiento y reparación de equipos split y sistemas de frío.</p>
+                            <div class="space-y-2 text-xs text-gray-500 pb-6 border-b border-gray-100">
+                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Prácticas presenciales incluidas</p>
+                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Salida laboral inmediata</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-lutmin-dark mb-3">Refrigeración y Aire Acondicionado</h3>
-                        <p class="text-gray-600 mb-6 text-sm">Instalación, mantenimiento y reparación de equipos split y sistemas de frío.</p>
-                        <a href="#contacto" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-2.5 rounded-full transition">
+                    <div class="p-8 pt-0">
+                        <a href="#contacto" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-3 rounded-full transition">
                             Inscribirme
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-slate-50 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-2 group border border-gray-100">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Electricidad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <!-- Electricidad -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-2 group border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Electricidad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-lutmin-dark mb-3">Electricidad Domiciliaria e Industrial</h3>
+                            <p class="text-gray-600 mb-6 text-sm">Planos, tableros, cableado estructurado y normas de seguridad eléctrica vigentes.</p>
+                            <div class="space-y-2 text-xs text-gray-500 pb-6 border-b border-gray-100">
+                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Matriculación sugerida</p>
+                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Seguridad eléctrica</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-lutmin-dark mb-3">Electricidad Domiciliaria e Industrial</h3>
-                        <p class="text-gray-600 mb-6 text-sm">Planos, tableros, cableado estructurado y normas de seguridad eléctrica vigentes.</p>
-                        <a href="#contacto" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-2.5 rounded-full transition">
+                    <div class="p-8 pt-0">
+                        <a href="#contacto" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-3 rounded-full transition">
                             Inscribirme
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-slate-50 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-2 group border border-gray-100">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Plomería" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <!-- Plomería -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-2 group border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Plomería" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-lutmin-dark mb-3">Instalaciones Sanitarias (Plomería)</h3>
+                            <p class="text-gray-600 mb-6 text-sm">Termofusión, tendido de cañerías, sanitarios y resolución de averías domiciliarias.</p>
+                            <div class="space-y-2 text-xs text-gray-500 pb-6 border-b border-gray-100">
+                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Materiales y herramientas</p>
+                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Prácticas en taller</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-lutmin-dark mb-3">Instalaciones Sanitarias (Plomería)</h3>
-                        <p class="text-gray-600 mb-6 text-sm">Termofusión, tendido de cañerías, sanitarios y resolución de averías domiciliarias.</p>
-                        <a href="#contacto" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-2.5 rounded-full transition">
+                    <div class="p-8 pt-0">
+                        <a href="#contacto" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-3 rounded-full transition">
                             Inscribirme
                         </a>
                     </div>
@@ -250,36 +314,51 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80" alt="Liderazgo" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
-                    <div class="p-8">
-                        <div class="text-lutmin-light font-bold text-xs uppercase mb-3 tracking-wider">6 Semanas</div>
-                        <h3 class="text-xl font-bold text-white mb-3">Liderazgo Estratégico</h3>
-                        <p class="text-gray-300 mb-6 text-sm">Herramientas para inspirar, alinear y guiar equipos de alto rendimiento hacia metas claras.</p>
+                <!-- Liderazgo -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80" alt="Liderazgo" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
+                        <div class="p-8">
+                            <div class="text-lutmin-light font-bold text-xs uppercase mb-3 tracking-wider">6 Semanas</div>
+                            <h3 class="text-xl font-bold text-white mb-3">Liderazgo Estratégico</h3>
+                            <p class="text-gray-300 mb-6 text-sm">Herramientas para inspirar, alinear y guiar equipos de alto rendimiento hacia metas claras.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
                         <a href="#contacto" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
                             Consultar
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80" alt="Capital Humano" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
-                    <div class="p-8">
-                        <div class="text-lutmin-light font-bold text-xs uppercase mb-3 tracking-wider">8 Semanas</div>
-                        <h3 class="text-xl font-bold text-white mb-3">Analista en Capital Humano</h3>
-                        <p class="text-gray-300 mb-6 text-sm">Gestión integral del talento, clima laboral, selección de personal y desarrollo organizacional.</p>
+                <!-- Capital Humano -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80" alt="Capital Humano" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
+                        <div class="p-8">
+                            <div class="text-lutmin-light font-bold text-xs uppercase mb-3 tracking-wider">8 Semanas</div>
+                            <h3 class="text-xl font-bold text-white mb-3">Analista en Capital Humano</h3>
+                            <p class="text-gray-300 mb-6 text-sm">Gestión integral del talento, clima laboral, selección de personal y desarrollo organizacional.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
                         <a href="#contacto" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
                             Consultar
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" alt="Negociación" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
-                    <div class="p-8">
-                        <div class="text-lutmin-light font-bold text-xs uppercase mb-3 tracking-wider">4 Semanas</div>
-                        <h3 class="text-xl font-bold text-white mb-3">Resolución de Conflictos</h3>
-                        <p class="text-gray-300 mb-6 text-sm">Técnicas avanzadas de comunicación persuasiva, acuerdos y manejo de crisis corporativas.</p>
+                <!-- Negociación -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" alt="Negociación" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
+                        <div class="p-8">
+                            <div class="text-lutmin-light font-bold text-xs uppercase mb-3 tracking-wider">4 Semanas</div>
+                            <h3 class="text-xl font-bold text-white mb-3">Resolución de Conflictos</h3>
+                            <p class="text-gray-300 mb-6 text-sm">Técnicas avanzadas de comunicación persuasiva, acuerdos y manejo de crisis corporativas.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
                         <a href="#contacto" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
                             Consultar
                         </a>
@@ -289,7 +368,45 @@
         </div>
     </section>
 
-    <!-- 6. NUEVA SECCIÓN: CAMPUS VIRTUAL -->
+    <!-- TESTIMONIOS HUMANOS (CONFIANZA) -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Experiencias reales</span>
+            <h2 class="text-4xl font-extrabold text-lutmin-dark mb-16">Lo que dicen quienes confiaron en nosotros</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm relative">
+                    <i class="fa-solid fa-quote-left text-lutmin-light/20 text-5xl absolute top-6 right-6"></i>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6 relative z-10">
+                        "Implementar las Normas ISO con el asesoramiento de Lutmin transformó por completo nuestra dinámica interna. Logramos un orden operativo increíble y el equipo se adaptó muy rápido."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-lutmin-dark text-white rounded-full flex items-center justify-center font-bold">MC</div>
+                        <div>
+                            <h4 class="font-bold text-lutmin-dark text-sm">Marcos Cárdenas</h4>
+                            <p class="text-xs text-gray-400">Gerente de Operaciones</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm relative">
+                    <i class="fa-solid fa-quote-left text-lutmin-light/20 text-5xl absolute top-6 right-6"></i>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6 relative z-10">
+                        "Hice el curso de Liderazgo Estratégico y me dio herramientas directas que apliqué al día siguiente en mi trabajo. La calidez de los profesores y el material del campus son excelentes."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-lutmin-light text-white rounded-full flex items-center justify-center font-bold">LS</div>
+                        <div>
+                            <h4 class="font-bold text-lutmin-dark text-sm">Lucía Sánchez</h4>
+                            <p class="text-xs text-gray-400">Egresada de Gestión</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CAMPUS VIRTUAL -->
     <section id="campus" class="py-24 bg-lutmin-light/5 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-3xl shadow-lg p-8 md:p-16 flex flex-col md:flex-row items-center gap-12 border border-lutmin-light/20">
@@ -317,7 +434,7 @@
         </div>
     </section>
 
-    <!-- 7. NUEVA SECCIÓN: RED DE TALENTO -->
+    <!-- 7. RED DE TALENTO -->
     <section id="talento" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Bolsa de Empleo</span>
@@ -348,8 +465,33 @@
         </div>
     </section>
 
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="py-24 bg-slate-50 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Dudas comunes</span>
+                <h2 class="text-4xl font-extrabold text-lutmin-dark">Preguntas Frecuentes</h2>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h4 class="font-bold text-lutmin-dark text-lg mb-2"><i class="fa-solid fa-circle-question text-lutmin-light mr-2"></i> ¿Cómo me inscribo a las capacitaciones?</h4>
+                    <p class="text-gray-600 text-sm pl-6">Podes completar el formulario de contacto especificando el curso de tu interés, o escribirnos directamente a nuestro WhatsApp o email para recibir los pasos de matriculación.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h4 class="font-bold text-lutmin-dark text-lg mb-2"><i class="fa-solid fa-circle-question text-lutmin-light mr-2"></i> ¿Los cursos otorgan certificado oficial?</h4>
+                    <p class="text-gray-600 text-sm pl-6">Sí, al finalizar y aprobar los módulos de cursado, emitimos un certificado digital con aval corporativo de Lutmin Consultora y validez en el área profesional correspondiente.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h4 class="font-bold text-lutmin-dark text-lg mb-2"><i class="fa-solid fa-circle-question text-lutmin-light mr-2"></i> ¿Las empresas pueden capacitar a su personal a medida?</h4>
+                    <p class="text-gray-600 text-sm pl-6">¡Por supuesto! Diseñamos planes in-company adaptados a las necesidades operativas y de liderazgo específicas de cada organización.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 8. SECCIÓN CONTACTO -->
-    <section id="contacto" class="py-24 bg-gray-50 border-t border-gray-200">
+    <section id="contacto" class="py-24 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row border border-gray-100">
                 
@@ -407,8 +549,8 @@
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Asunto / Área de Interés</label>
                             <select class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition appearance-none">
                                 <option>Inscripción a Cursos</option>
-                                <option>Consultoría Empresarial</option>
-                                <option>Enviar CV / Búsqueda Laboral</option>
+                                <option>Consultoría Empresarial / ISO</option>
+                                <option>Enviar CV / Red de Talento</option>
                                 <option>Acceso al Campus Virtual</option>
                                 <option>Otra consulta</option>
                             </select>
