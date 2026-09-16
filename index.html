@@ -41,24 +41,38 @@
                 <img src="LOGO.png" alt="Lutmin Consultora" class="h-20 lg:h-24 w-auto object-contain">
             </a>
 
-            <!-- MENÚ -->
+            <!-- MENÚ ESCRITORIO -->
             <nav class="hidden lg:flex items-center gap-1 font-semibold text-sm text-lutmin-dark">
                 <a href="#inicio" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Inicio</a>
                 <a href="#nosotros" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Nosotros</a>
+                <a href="#iso" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">ISO</a>
                 <a href="#tecnicos" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Cursos</a>
                 <a href="#campus" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Campus</a>
                 <a href="#talento" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Talento</a>
                 <a href="#faq" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">FAQ</a>
             </nav>
 
-            <!-- BOTÓN CTA -->
+            <!-- BOTÓN CTA ESCRITORIO -->
             <a href="#contacto" class="hidden md:inline-block bg-lutmin-dark hover:bg-lutmin-light text-white text-sm font-bold px-8 py-3 rounded-full shadow-md hover:shadow-lg transition duration-300">
                 Contacto
             </a>
             
-            <button class="lg:hidden text-lutmin-dark text-2xl">
+            <!-- BOTÓN MENÚ MÓVIL (INTERACTIVO) -->
+            <button id="menu-btn" class="lg:hidden text-lutmin-dark text-2xl focus:outline-none">
                 <i class="fa-solid fa-bars"></i>
             </button>
+        </div>
+
+        <!-- MENÚ MÓVIL DESPLEGABLE -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-6 py-4 space-y-3 shadow-lg">
+            <a href="#inicio" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">Inicio</a>
+            <a href="#nosotros" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">Nosotros</a>
+            <a href="#iso" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">Normas ISO</a>
+            <a href="#tecnicos" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">Cursos</a>
+            <a href="#campus" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">Campus Virtual</a>
+            <a href="#talento" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">Red de Talento</a>
+            <a href="#faq" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">FAQ</a>
+            <a href="#contacto" class="block w-full text-center bg-lutmin-dark text-white font-bold py-2.5 rounded-full mt-2">Contacto</a>
         </div>
     </header>
 
@@ -80,10 +94,10 @@
                     Acompañamos a las empresas en la construcción de entornos de trabajo más humanos y eficientes, integrando estándares ISO, análisis y liderazgo.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-6">
-                    <a href="#tecnicos" class="bg-lutmin-light hover:bg-blue-400 text-white font-bold px-10 py-4 rounded-full shadow-[0_0_20px_rgba(47,141,253,0.4)] transition duration-300 text-center">
+                    <a href="#tecnicos" class="bg-lutmin-light hover:bg-blue-400 text-white font-bold px-10 py-4 rounded-full shadow-[0_0_20px_rgba(47,141,253,0.4)] transition duration-300 text-center transform hover:scale-105">
                         Explorar Cursos
                     </a>
-                    <a href="#contacto" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-10 py-4 rounded-full backdrop-blur-md transition duration-300 text-center">
+                    <a href="#contacto" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-10 py-4 rounded-full backdrop-blur-md transition duration-300 text-center transform hover:scale-105">
                         Contactarnos
                     </a>
                 </div>
@@ -113,7 +127,7 @@
         </div>
     </section>
 
-    <!-- ALIANZAS CON NOMBRES EN MINÚSCULA (.png) -->
+    <!-- ALIANZAS -->
     <section class="py-16 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">Organizaciones y aliados que confían en nuestra trayectoria</p>
@@ -194,9 +208,8 @@
                         <span class="text-lutmin-light font-bold text-xs uppercase">10 Semanas</span>
                         <h3 class="text-2xl font-bold text-lutmin-dark">Implementación ISO 9001</h3>
                         <p class="text-gray-600 text-sm">Diseño y mantenimiento de Sistemas de Gestión de Calidad para la mejora continua.</p>
-                        <div class="flex gap-4 text-xs font-semibold text-gray-500 pt-2">
-                            <span><i class="fa-solid fa-laptop text-lutmin-light mr-1"></i> Online / Híbrido</span>
-                            <span><i class="fa-solid fa-certificate text-lutmin-light mr-1"></i> Certificado Oficial</span>
+                        <div class="pt-2">
+                            <button onclick="seleccionarCurso('Implementación ISO 9001')" class="text-lutmin-dark font-bold hover:text-lutmin-light transition text-sm">Inscribirme ahora &rarr;</button>
                         </div>
                     </div>
                 </div>
@@ -209,9 +222,8 @@
                         <span class="text-lutmin-light font-bold text-xs uppercase">6 Semanas</span>
                         <h3 class="text-2xl font-bold text-lutmin-dark">Auditoría Interna</h3>
                         <p class="text-gray-600 text-sm">Formación de auditores para evaluar procesos corporativos y asegurar estándares.</p>
-                        <div class="flex gap-4 text-xs font-semibold text-gray-500 pt-2">
-                            <span><i class="fa-solid fa-laptop text-lutmin-light mr-1"></i> Online / Híbrido</span>
-                            <span><i class="fa-solid fa-certificate text-lutmin-light mr-1"></i> Certificado Oficial</span>
+                        <div class="pt-2">
+                            <button onclick="seleccionarCurso('Auditoría Interna')" class="text-lutmin-dark font-bold hover:text-lutmin-light transition text-sm">Inscribirme ahora &rarr;</button>
                         </div>
                     </div>
                 </div>
@@ -240,16 +252,12 @@
                         <div class="p-8">
                             <h3 class="text-xl font-bold text-lutmin-dark mb-3">Refrigeración y Aire Acondicionado</h3>
                             <p class="text-gray-600 mb-6 text-sm">Instalación, mantenimiento y reparación de equipos split y sistemas de frío.</p>
-                            <div class="space-y-2 text-xs text-gray-500 pb-6 border-b border-gray-100">
-                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Prácticas presenciales incluidas</p>
-                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Salida laboral inmediata</p>
-                            </div>
                         </div>
                     </div>
                     <div class="p-8 pt-0">
-                        <a href="#contacto" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-3 rounded-full transition">
+                        <button onclick="seleccionarCurso('Refrigeración y Aire Acondicionado')" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-3 rounded-full transition">
                             Inscribirme
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -262,16 +270,12 @@
                         <div class="p-8">
                             <h3 class="text-xl font-bold text-lutmin-dark mb-3">Electricidad Domiciliaria e Industrial</h3>
                             <p class="text-gray-600 mb-6 text-sm">Planos, tableros, cableado estructurado y normas de seguridad eléctrica vigentes.</p>
-                            <div class="space-y-2 text-xs text-gray-500 pb-6 border-b border-gray-100">
-                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Matriculación sugerida</p>
-                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Seguridad eléctrica</p>
-                            </div>
                         </div>
                     </div>
                     <div class="p-8 pt-0">
-                        <a href="#contacto" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-3 rounded-full transition">
+                        <button onclick="seleccionarCurso('Electricidad Domiciliaria e Industrial')" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-3 rounded-full transition">
                             Inscribirme
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -284,16 +288,12 @@
                         <div class="p-8">
                             <h3 class="text-xl font-bold text-lutmin-dark mb-3">Instalaciones Sanitarias (Plomería)</h3>
                             <p class="text-gray-600 mb-6 text-sm">Termofusión, tendido de cañerías, sanitarios y resolución de averías domiciliarias.</p>
-                            <div class="space-y-2 text-xs text-gray-500 pb-6 border-b border-gray-100">
-                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Materiales y herramientas</p>
-                                <p><i class="fa-solid fa-check text-lutmin-light mr-2"></i> Prácticas en taller</p>
-                            </div>
                         </div>
                     </div>
                     <div class="p-8 pt-0">
-                        <a href="#contacto" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-3 rounded-full transition">
+                        <button onclick="seleccionarCurso('Instalaciones Sanitarias (Plomería)')" class="block w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-3 rounded-full transition">
                             Inscribirme
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -313,6 +313,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Liderazgo -->
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl flex flex-col justify-between">
                     <div>
                         <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80" alt="Liderazgo" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
@@ -323,12 +324,13 @@
                         </div>
                     </div>
                     <div class="p-8 pt-0">
-                        <a href="#contacto" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
+                        <button onclick="seleccionarCurso('Liderazgo Estratégico')" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
                             Consultar
-                        </a>
+                        </button>
                     </div>
                 </div>
 
+                <!-- Capital Humano -->
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl flex flex-col justify-between">
                     <div>
                         <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80" alt="Capital Humano" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
@@ -339,12 +341,13 @@
                         </div>
                     </div>
                     <div class="p-8 pt-0">
-                        <a href="#contacto" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
+                        <button onclick="seleccionarCurso('Analista en Capital Humano')" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
                             Consultar
-                        </a>
+                        </button>
                     </div>
                 </div>
 
+                <!-- Negociación -->
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl flex flex-col justify-between">
                     <div>
                         <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" alt="Negociación" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
@@ -355,16 +358,16 @@
                         </div>
                     </div>
                     <div class="p-8 pt-0">
-                        <a href="#contacto" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
+                        <button onclick="seleccionarCurso('Resolución de Conflictos')" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
                             Consultar
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIOS HUMANOS -->
+    <!-- TESTIMONIOS -->
     <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Experiencias reales</span>
@@ -414,14 +417,9 @@
                     <p class="text-gray-600 text-lg leading-relaxed">
                         Accedé a tus clases en vivo, material de estudio y foros interactivos desde cualquier dispositivo. Nuestra plataforma está diseñada para que estudies a tu propio ritmo, 24/7.
                     </p>
-                    <ul class="space-y-3 text-sm text-gray-600 font-medium pb-4 text-left inline-block md:block">
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-lutmin-light mr-3"></i> Material didáctico actualizado</li>
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-lutmin-light mr-3"></i> Acompañamiento docente online</li>
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-lutmin-light mr-3"></i> Certificación digital inmediata</li>
-                    </ul>
-                    <a href="#" class="inline-block bg-lutmin-light hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-full shadow-md transition duration-300">
+                    <button onclick="alert('Redirigiendo al portal de acceso del Campus Virtual...');" class="inline-block bg-lutmin-light hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-full shadow-md transition duration-300">
                         Ingresar al Campus <i class="fa-solid fa-arrow-right-to-bracket ml-2"></i>
-                    </a>
+                    </button>
                 </div>
                 <div class="md:w-1/2">
                     <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Campus Virtual" class="rounded-2xl shadow-xl transform rotate-1 hover:rotate-0 transition duration-500">
@@ -446,7 +444,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-lutmin-dark mb-3">Soy Profesional</h3>
                     <p class="text-gray-600 text-sm mb-6">Cargá tu CV y postulate a las búsquedas vigentes gestionadas por nuestra consultora.</p>
-                    <a href="#contacto" class="text-lutmin-light font-bold hover:underline">Subir mi CV &rarr;</a>
+                    <a href="#contacto" onclick="seleccionarAsunto('Enviar CV / Red de Talento')" class="text-lutmin-light font-bold hover:underline">Subir mi CV &rarr;</a>
                 </div>
                 
                 <div class="bg-lutmin-dark p-10 rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 group text-white">
@@ -455,13 +453,13 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Soy Empresa</h3>
                     <p class="text-gray-300 text-sm mb-6">Encontrá el perfil exacto que tu organización necesita con nuestro servicio de reclutamiento.</p>
-                    <a href="#contacto" class="text-lutmin-light font-bold hover:underline">Solicitar personal &rarr;</a>
+                    <a href="#contacto" onclick="seleccionarAsunto('Consultoría Empresarial / ISO')" class="text-lutmin-light font-bold hover:underline">Solicitar personal &rarr;</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PREGUNTAS FRECUENTES -->
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
     <section id="faq" class="py-24 bg-slate-50 border-t border-gray-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -486,7 +484,7 @@
         </div>
     </section>
 
-    <!-- 8. CONTACTO -->
+    <!-- 8. CONTACTO INTERACTIVO -->
     <section id="contacto" class="py-24 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row border border-gray-100">
@@ -530,20 +528,20 @@
                 </div>
                 
                 <div class="p-12 lg:w-3/5 bg-white">
-                    <form class="space-y-6">
+                    <form id="contact-form" onsubmit="enviarFormulario(event)" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre completo</label>
-                                <input type="text" class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition">
+                                <input type="text" id="nombre" required class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition">
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-gray-700 mb-2">Correo electrónico</label>
-                                <input type="email" class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition">
+                                <input type="email" id="email" required class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition">
                             </div>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Asunto / Área de Interés</label>
-                            <select class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition appearance-none">
+                            <select id="asunto" class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition appearance-none">
                                 <option>Inscripción a Cursos</option>
                                 <option>Consultoría Empresarial / ISO</option>
                                 <option>Enviar CV / Red de Talento</option>
@@ -553,9 +551,9 @@
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Mensaje</label>
-                            <textarea rows="4" class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition"></textarea>
+                            <textarea id="mensaje" rows="4" required class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition"></textarea>
                         </div>
-                        <button class="w-full bg-lutmin-dark hover:bg-lutmin-light text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <button type="submit" class="w-full bg-lutmin-dark hover:bg-lutmin-light text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                             Enviar Solicitud
                         </button>
                     </form>
@@ -578,6 +576,56 @@
         </div>
     </footer>
 
+    <!-- SCRIPTS DE INTERACTIVIDAD -->
+    <script>
+        // 1. Funcionalidad del menú móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Ocultar menú al hacer clic en un enlace del celular
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Función interactiva al hacer clic en "Inscribirme" o "Consultar" desde cualquier curso
+        function seleccionarCurso(nombreCurso) {
+            const selectAsunto = document.getElementById('asunto');
+            selectAsunto.value = "Inscripción a Cursos";
+            
+            const mensajeInput = document.getElementById('mensaje');
+            mensajeInput.value = `Hola, me interesa obtener más información e inscribirme en el curso de: ${nombreCurso}.`;
+            
+            // Desplazarse suavemente hacia la sección de contacto
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 3. Función para Red de Talento
+        function seleccionarAsunto(tipoAsunto) {
+            const selectAsunto = document.getElementById('asunto');
+            for(let i=0; i<selectAsunto.options.length; i++) {
+                if(selectAsunto.options[i].text.includes(tipoAsunto)) {
+                    selectAsunto.selectedIndex = i;
+                    break;
+                }
+            }
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 4. Simulación de envío de formulario interactivo
+        function enviarFormulario(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            alert(`¡Muchas gracias ${nombre}! Tu solicitud ha sido enviada con éxito. Nos pondremos en contacto a la brevedad.`);
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+
 </body>
-</html>
 </html>
