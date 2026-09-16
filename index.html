@@ -13,8 +13,8 @@
                 extend: {
                     colors: {
                         lutmin: {
-                            dark: '#000B3C',  /* Azul Oscuro Oficial (Búsqueda / Profundidad) */
-                            light: '#2F8DFD', /* Celeste / Blanco Oficial (Claridad y Luz) */
+                            dark: '#000B3C',  /* Azul Oscuro Oficial */
+                            light: '#2F8DFD', /* Celeste Oficial */
                         }
                     },
                     fontFamily: {
@@ -33,12 +33,12 @@
 </head>
 <body class="bg-slate-50 text-gray-800 antialiased overflow-x-hidden">
 
-    <!-- BARRA DE NAVEGACIÓN -->
+    <!-- BARRA DE NAVEGACIÓN RESPONSIVA -->
     <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
             <!-- LOGO -->
             <a href="#inicio" class="flex items-center hover:opacity-90 transition">
-                <img src="LOGO.png" alt="Lutmin Consultora" class="h-20 lg:h-24 w-auto object-contain">
+                <img src="LOGO.png" alt="Lutmin Consultora" class="h-16 sm:h-20 lg:h-24 w-auto object-contain">
             </a>
 
             <!-- MENÚ ESCRITORIO -->
@@ -53,26 +53,26 @@
 
             <!-- BOTÓN ACCESO CAMPUS -->
             <div class="hidden md:flex items-center gap-3">
-                <button onclick="abrirModalCampus()" class="bg-lutmin-dark hover:bg-lutmin-light text-white text-sm font-bold px-6 py-3 rounded-full shadow-md hover:shadow-lg transition duration-300 flex items-center gap-2">
+                <button onclick="abrirModalCampus()" class="bg-lutmin-dark hover:bg-lutmin-light text-white text-xs sm:text-sm font-bold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-lg transition duration-300 flex items-center gap-2">
                     <i class="fa-solid fa-key text-xs"></i> Acceso Campus
                 </button>
             </div>
             
-            <!-- BOTÓN MENÚ MÓVIL -->
-            <button id="menu-btn" class="lg:hidden text-lutmin-dark text-2xl focus:outline-none">
+            <!-- BOTÓN MENÚ MÓVIL (HAMBURGUESA) -->
+            <button id="menu-btn" class="lg:hidden text-lutmin-dark text-2xl focus:outline-none p-2">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
-        <!-- MENÚ MÓVIL DESPLEGABLE -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-6 py-4 space-y-3 shadow-lg">
-            <a href="#inicio" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">Inicio</a>
-            <a href="#nosotros" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">Nosotros</a>
-            <a href="#servicios-b2b" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">Servicios Empresas</a>
-            <a href="#cursos" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">Cursos y Capacitaciones</a>
-            <a href="#talento" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">Red de Talento</a>
-            <a href="#faq" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1">FAQ</a>
-            <button onclick="abrirModalCampus()" class="w-full text-center bg-lutmin-dark text-white font-bold py-2.5 rounded-full mt-2">Acceso Campus</button>
+        <!-- MENÚ MÓVIL DESPLEGABLE RESPONSIVO -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#inicio" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1 text-base">Inicio</a>
+            <a href="#nosotros" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1 text-base">Nosotros</a>
+            <a href="#servicios-b2b" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1 text-base">Servicios Empresas</a>
+            <a href="#cursos" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1 text-base">Cursos y Capacitaciones</a>
+            <a href="#talento" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1 text-base">Red de Talento</a>
+            <a href="#faq" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1 text-base">FAQ</a>
+            <button onclick="abrirModalCampus()" class="w-full text-center bg-lutmin-dark text-white font-bold py-3 rounded-full mt-4 text-sm shadow-md">Acceso Campus</button>
         </div>
     </header>
 
@@ -82,22 +82,22 @@
         <div class="absolute inset-0 bg-gradient-to-r from-lutmin-dark/95 via-lutmin-dark/70 to-transparent"></div>
         
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 text-center lg:text-left flex flex-col lg:flex-row items-center">
-            <div class="lg:w-2/3 space-y-8">
+            <div class="lg:w-2/3 space-y-6 sm:space-y-8">
                 <div class="inline-flex items-center gap-2 bg-lutmin-light/20 border border-lutmin-light/50 text-lutmin-light text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full backdrop-blur-sm">
                     <i class="fa-solid fa-lightbulb"></i> Iluminando cada proceso organizacional
                 </div>
-                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight text-white drop-shadow-md">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight text-white drop-shadow-md">
                     Estrategia y talento <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-lutmin-light to-blue-200">hacia la claridad total</span>
                 </h1>
-                <p class="text-lg sm:text-xl text-gray-200 max-w-2xl leading-relaxed font-light mx-auto lg:mx-0 drop-shadow-sm">
+                <p class="text-base sm:text-xl text-gray-200 max-w-2xl leading-relaxed font-light mx-auto lg:mx-0 drop-shadow-sm">
                     Acompañamos a las organizaciones en Argentina y Paraguay como aliados estratégicos, integrando gestión de RR.HH., procesos y desarrollo humano.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-6">
-                    <a href="#servicios-b2b" class="bg-lutmin-light hover:bg-blue-400 text-white font-bold px-10 py-4 rounded-full shadow-[0_0_20px_rgba(47,141,253,0.4)] transition duration-300 text-center transform hover:scale-105">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4 sm:pt-6">
+                    <a href="#servicios-b2b" class="bg-lutmin-light hover:bg-blue-400 text-white font-bold px-8 sm:px-10 py-3.5 sm:py-4 rounded-full shadow-[0_0_20px_rgba(47,141,253,0.4)] transition duration-300 text-center text-sm sm:text-base">
                         Servicios para Empresas
                     </a>
-                    <a href="#cursos" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-10 py-4 rounded-full backdrop-blur-md transition duration-300 text-center transform hover:scale-105">
+                    <a href="#cursos" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-8 sm:px-10 py-3.5 sm:py-4 rounded-full backdrop-blur-md transition duration-300 text-center text-sm sm:text-base">
                         Ver Capacitaciones
                     </a>
                 </div>
@@ -105,102 +105,101 @@
         </div>
     </section>
 
-    <!-- INDICADORES DE IMPACTO -->
+    <!-- INDICADORES DE IMPACTO RESPONSIVOS -->
     <section class="bg-lutmin-light text-white py-8 shadow-inner">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-                <p class="text-3xl md:text-4xl font-extrabold">+500</p>
-                <p class="text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Profesionales Capacitados</p>
+                <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold">+500</p>
+                <p class="text-[10px] sm:text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Profesionales Capacitados</p>
             </div>
             <div>
-                <p class="text-3xl md:text-4xl font-extrabold">+100</p>
-                <p class="text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Empresas Asesoradas</p>
+                <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold">+100</p>
+                <p class="text-[10px] sm:text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Empresas Asesoradas</p>
             </div>
             <div>
-                <p class="text-3xl md:text-4xl font-extrabold">AR & PY</p>
-                <p class="text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Presencia Regional</p>
+                <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold">AR & PY</p>
+                <p class="text-[10px] sm:text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Presencia Regional</p>
             </div>
             <div>
-                <p class="text-3xl md:text-4xl font-extrabold">24/7</p>
-                <p class="text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Campus Virtual Activo</p>
+                <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold">24/7</p>
+                <p class="text-[10px] sm:text-xs uppercase tracking-wider font-semibold mt-1 opacity-90">Campus Virtual Activo</p>
             </div>
         </div>
     </section>
 
-    <!-- ALIANZAS -->
+    <!-- ALIANZAS CON LOS NUEVOS NOMBRES DE ARCHIVO -->
     <section class="py-16 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">Organizaciones y aliados que confían en nuestra trayectoria</p>
-            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-75">
-                <img src="LOGOADCON.png" alt="ADCON" class="h-12 md:h-16 object-contain hover:opacity-100 transition">
-                <img src="LOGOEX.png" alt="EX" class="h-12 md:h-16 object-contain hover:opacity-100 transition">
-                <img src="LOGOSE.png" alt="SE" class="h-12 md:h-16 object-contain hover:opacity-100 transition">
-                <img src="LOGOWA.png" alt="WA" class="h-12 md:h-16 object-contain hover:opacity-100 transition">
-                <img src="LOGOQA.png" alt="QA" class="h-12 md:h-16 object-contain hover:opacity-100 transition">
+            <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 md:gap-16 opacity-75">
+                <img src="LOGOEX.png" alt="EX" class="h-10 sm:h-12 md:h-16 object-contain hover:opacity-100 transition">
+                <img src="LOGOOA.jpeg" alt="OA" class="h-10 sm:h-12 md:h-16 object-contain hover:opacity-100 transition">
+                <img src="LOGOSE.png" alt="SE" class="h-10 sm:h-12 md:h-16 object-contain hover:opacity-100 transition">
+                <img src="LOGOSX.jpeg" alt="SX" class="h-10 sm:h-12 md:h-16 object-contain hover:opacity-100 transition">
+                <img src="LOGOWA.png" alt="WA" class="h-10 sm:h-12 md:h-16 object-contain hover:opacity-100 transition">
             </div>
         </div>
     </section>
 
-    <!-- 2. SECCIÓN NOSOTROS (BASADA EN LA CARPETA CORPORATIVA) -->
-    <section id="nosotros" class="py-24 bg-slate-50 border-b border-gray-100">
+    <!-- 2. SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="py-20 sm:py-24 bg-slate-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Nuestra Identidad</span>
-                <h2 class="text-4xl font-extrabold text-lutmin-dark">El significado de Lutmin</h2>
-                <p class="mt-4 text-gray-600 text-lg">Nace de la palabra "luz", símbolo universal de claridad y transformación. Representamos una fuente que ilumina los procesos humanos y organizacionales.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-lutmin-dark">El significado de Lutmin</h2>
+                <p class="mt-4 text-gray-600 text-base sm:text-lg">Nace de la palabra "luz", símbolo universal de claridad y transformación. Representamos una fuente que ilumina los procesos humanos y organizacionales.</p>
                 <div class="w-20 h-1.5 bg-lutmin-light rounded-full mx-auto mt-4"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 sm:p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
                     <div class="w-14 h-14 bg-lutmin-dark text-white rounded-2xl flex items-center justify-center text-xl mb-6 shadow-md">
                         <i class="fa-solid fa-bullseye"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-lutmin-dark mb-4">Nuestra Misión</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold text-lutmin-dark mb-4">Nuestra Misión</h3>
                     <p class="text-gray-600 leading-relaxed text-sm">
                         Acompañar a las organizaciones en la construcción de entornos de trabajo más humanos, eficientes y alineados con sus objetivos estratégicos, integrando herramientas de gestión, análisis y comunicación para el desarrollo pleno del talento.
                     </p>
                 </div>
 
-                <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                <div class="bg-white p-8 sm:p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
                     <div class="w-14 h-14 bg-lutmin-light text-white rounded-2xl flex items-center justify-center text-xl mb-6 shadow-md">
                         <i class="fa-solid fa-eye"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-lutmin-dark mb-4">Nuestra Visión</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold text-lutmin-dark mb-4">Nuestra Visión</h3>
                     <p class="text-gray-600 leading-relaxed text-sm">
                         Convertirnos en la consultora referente para la transformación organizacional humana y eficiente, en la que las empresas despierten el talento, construyan culturas de compromiso y alcancen logros sostenibles.
                     </p>
                 </div>
 
-                <div class="bg-lutmin-dark p-10 rounded-3xl shadow-xl text-white">
+                <div class="bg-lutmin-dark p-8 sm:p-10 rounded-3xl shadow-xl text-white">
                     <div class="w-14 h-14 bg-white/10 text-lutmin-light rounded-2xl flex items-center justify-center text-xl mb-6 backdrop-blur-sm">
                         <i class="fa-solid fa-gem"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Nuestros Valores</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Nuestros Valores</h3>
                     <ul class="space-y-3 text-sm text-gray-300 font-medium">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-lutmin-light mr-3"></i> <strong>Claridad:</strong> Transparencia e información oportuna.</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-lutmin-light mr-3"></i> <strong>Humanidad:</strong> Empatía con cada historia y desafío.</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-lutmin-light mr-3"></i> <strong>Innovación:</strong> Metodologías ágiles y tecnología.</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-lutmin-light mr-3"></i> <strong>Compromiso:</strong> Aliados activos en tus resultados.</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-lutmin-light mr-3"></i> <strong>Excelencia e Integridad:</strong> Ética y precisión profesional.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-lutmin-light mr-3 mt-1"></i> <span><strong>Claridad:</strong> Transparencia e información oportuna.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-lutmin-light mr-3 mt-1"></i> <span><strong>Humanidad:</strong> Empatía con cada historia y desafío.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-lutmin-light mr-3 mt-1"></i> <span><strong>Innovación:</strong> Metodologías ágiles y tecnología.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-lutmin-light mr-3 mt-1"></i> <span><strong>Compromiso:</strong> Aliados activos en tus resultados.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-lutmin-light mr-3 mt-1"></i> <span><strong>Excelencia e Integridad:</strong> Ética y precisión profesional.</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. NUEVA SECCIÓN: 6 PILARES DE SERVICIOS CORPORATIVOS (B2B) -->
-    <section id="servicios-b2b" class="py-24 bg-white">
+    <!-- 3. SERVICIOS CORPORATIVOS (B2B) -->
+    <section id="servicios-b2b" class="py-20 sm:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Soluciones Integrales B2B</span>
-                <h2 class="text-4xl font-extrabold text-lutmin-dark">Nuestros Servicios Corporativos</h2>
-                <p class="mt-4 text-gray-600 text-lg">Combinamos análisis técnico, visión estratégica y una mirada humana para optimizar cada área de tu organización.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-lutmin-dark">Nuestros Servicios Corporativos</h2>
+                <p class="mt-4 text-gray-600 text-base sm:text-lg">Combinamos análisis técnico, visión estratégica y una mirada humana para optimizar cada área de tu organización.</p>
                 <div class="w-20 h-1.5 bg-lutmin-light rounded-full mx-auto mt-4"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Servicio 1 -->
                 <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-lutmin-dark text-white rounded-xl flex items-center justify-center font-bold text-lg mb-6">01</div>
@@ -210,7 +209,6 @@
                     <button onclick="seleccionarAsunto('Consultoría Empresarial / ISO')" class="text-lutmin-light font-bold text-sm hover:underline text-left">Consultar servicio &rarr;</button>
                 </div>
 
-                <!-- Servicio 2 -->
                 <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-lutmin-dark text-white rounded-xl flex items-center justify-center font-bold text-lg mb-6">02</div>
@@ -220,7 +218,6 @@
                     <button onclick="seleccionarAsunto('Consultoría Empresarial / ISO')" class="text-lutmin-light font-bold text-sm hover:underline text-left">Consultar servicio &rarr;</button>
                 </div>
 
-                <!-- Servicio 3 -->
                 <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-lutmin-dark text-white rounded-xl flex items-center justify-center font-bold text-lg mb-6">03</div>
@@ -230,7 +227,6 @@
                     <button onclick="seleccionarAsunto('Consultoría Empresarial / ISO')" class="text-lutmin-light font-bold text-sm hover:underline text-left">Consultar servicio &rarr;</button>
                 </div>
 
-                <!-- Servicio 4 -->
                 <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-lutmin-dark text-white rounded-xl flex items-center justify-center font-bold text-lg mb-6">04</div>
@@ -240,7 +236,6 @@
                     <button onclick="seleccionarAsunto('Consultoría Empresarial / ISO')" class="text-lutmin-light font-bold text-sm hover:underline text-left">Consultar servicio &rarr;</button>
                 </div>
 
-                <!-- Servicio 5 -->
                 <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-lutmin-dark text-white rounded-xl flex items-center justify-center font-bold text-lg mb-6">05</div>
@@ -250,7 +245,6 @@
                     <button onclick="seleccionarAsunto('Consultoría Empresarial / ISO')" class="text-lutmin-light font-bold text-sm hover:underline text-left">Consultar servicio &rarr;</button>
                 </div>
 
-                <!-- Servicio 6 -->
                 <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-lutmin-dark text-white rounded-xl flex items-center justify-center font-bold text-lg mb-6">06</div>
@@ -264,18 +258,18 @@
     </section>
 
     <!-- 4. OFERTA ACADÉMICA Y CURSOS -->
-    <section id="cursos" class="py-24 bg-slate-50 border-t border-gray-100">
+    <section id="cursos" class="py-20 sm:py-24 bg-slate-50 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Capacitación y Cursos</span>
-                <h2 class="text-4xl font-extrabold text-lutmin-dark">Formación Profesional</h2>
-                <p class="mt-4 text-gray-600 text-lg">Cursos técnicos y de liderazgo con aval corporativo y rápida inserción laboral.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-lutmin-dark">Formación Profesional</h2>
+                <p class="mt-4 text-gray-600 text-base sm:text-lg">Cursos técnicos y de liderazgo con aval corporativo y rápida inserción laboral.</p>
                 <div class="w-20 h-1.5 bg-lutmin-light rounded-full mx-auto mt-4"></div>
             </div>
 
             <!-- NORMAS ISO / CALIDAD -->
             <div class="mb-16">
-                <h3 class="text-2xl font-bold text-lutmin-dark mb-8 flex items-center gap-3">
+                <h3 class="text-xl sm:text-2xl font-bold text-lutmin-dark mb-8 flex items-center gap-3">
                     <i class="fa-solid fa-award text-lutmin-light"></i> Gestión de Calidad y Normas ISO
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -307,7 +301,7 @@
 
             <!-- CURSOS TÉCNICOS Y OFICIOS -->
             <div class="mb-16">
-                <h3 class="text-2xl font-bold text-lutmin-dark mb-8 flex items-center gap-3">
+                <h3 class="text-xl sm:text-2xl font-bold text-lutmin-dark mb-8 flex items-center gap-3">
                     <i class="fa-solid fa-screwdriver-wrench text-lutmin-light"></i> Cursos Técnicos y Oficios
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -354,7 +348,7 @@
 
             <!-- GESTIÓN Y LIDERAZGO -->
             <div>
-                <h3 class="text-2xl font-bold text-lutmin-dark mb-8 flex items-center gap-3">
+                <h3 class="text-xl sm:text-2xl font-bold text-lutmin-dark mb-8 flex items-center gap-3">
                     <i class="fa-solid fa-users-gear text-lutmin-light"></i> Gestión y Liderazgo
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -430,10 +424,10 @@
     </section>
 
     <!-- TESTIMONIOS -->
-    <section class="py-24 bg-white">
+    <section class="py-20 sm:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Experiencias reales</span>
-            <h2 class="text-4xl font-extrabold text-lutmin-dark mb-16">Lo que dicen quienes confiaron en nosotros</h2>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-lutmin-dark mb-16">Lo que dicen quienes confiaron en nosotros</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
                 <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm relative">
@@ -468,29 +462,29 @@
     </section>
 
     <!-- RED DE TALENTO -->
-    <section id="talento" class="py-24 bg-slate-50 border-t border-gray-100">
+    <section id="talento" class="py-20 sm:py-24 bg-slate-50 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Bolsa de Empleo</span>
-            <h2 class="text-4xl font-extrabold text-lutmin-dark mb-4">Red de Talento Lutmin</h2>
-            <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-lutmin-dark mb-4">Red de Talento Lutmin</h2>
+            <p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mb-12">
                 Conectamos a nuestros egresados con las mejores empresas de la región en Argentina y Paraguay.
             </p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white p-10 rounded-3xl border border-gray-200 hover:border-lutmin-light transition shadow-sm group">
+                <div class="bg-white p-8 sm:p-10 rounded-3xl border border-gray-200 hover:border-lutmin-light transition shadow-sm group">
                     <div class="w-16 h-16 mx-auto bg-slate-50 text-lutmin-dark rounded-full flex items-center justify-center text-2xl mb-6 shadow-md group-hover:scale-110 transition">
                         <i class="fa-regular fa-file-lines"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-lutmin-dark mb-3">Soy Profesional</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold text-lutmin-dark mb-3">Soy Profesional</h3>
                     <p class="text-gray-600 text-sm mb-6">Cargá tu CV y postulate a las búsquedas vigentes gestionadas por nuestra consultora.</p>
                     <button onclick="seleccionarAsunto('Enviar CV / Red de Talento')" class="text-lutmin-light font-bold hover:underline">Subir mi CV &rarr;</button>
                 </div>
                 
-                <div class="bg-lutmin-dark p-10 rounded-3xl shadow-lg transition group text-white">
+                <div class="bg-lutmin-dark p-8 sm:p-10 rounded-3xl shadow-lg transition group text-white">
                     <div class="w-16 h-16 mx-auto bg-white/10 text-lutmin-light rounded-full flex items-center justify-center text-2xl mb-6 shadow-md group-hover:scale-110 transition">
                         <i class="fa-solid fa-briefcase"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Soy Empresa</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Soy Empresa</h3>
                     <p class="text-gray-300 text-sm mb-6">Encontrá el perfil exacto que tu organización necesita con nuestro servicio de reclutamiento.</p>
                     <button onclick="seleccionarAsunto('Consultoría Empresarial / ISO')" class="text-lutmin-light font-bold hover:underline">Solicitar personal &rarr;</button>
                 </div>
@@ -499,24 +493,24 @@
     </section>
 
     <!-- PREGUNTAS FRECUENTES -->
-    <section id="faq" class="py-24 bg-white border-t border-gray-100">
+    <section id="faq" class="py-20 sm:py-24 bg-white border-t border-gray-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Dudas comunes</span>
-                <h2 class="text-4xl font-extrabold text-lutmin-dark">Preguntas Frecuentes</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-lutmin-dark">Preguntas Frecuentes</h2>
             </div>
             
             <div class="space-y-6">
                 <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                    <h4 class="font-bold text-lutmin-dark text-lg mb-2"><i class="fa-solid fa-circle-question text-lutmin-light mr-2"></i> ¿Cómo me inscribo a las capacitaciones?</h4>
+                    <h4 class="font-bold text-lutmin-dark text-base sm:text-lg mb-2"><i class="fa-solid fa-circle-question text-lutmin-light mr-2"></i> ¿Cómo me inscribo a las capacitaciones?</h4>
                     <p class="text-gray-600 text-sm pl-6">Podes completar el formulario de contacto especificando el curso de tu interés, o escribirnos directamente a nuestro WhatsApp o email para recibir los pasos de matriculación.</p>
                 </div>
                 <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                    <h4 class="font-bold text-lutmin-dark text-lg mb-2"><i class="fa-solid fa-circle-question text-lutmin-light mr-2"></i> ¿Los cursos otorgan certificado oficial?</h4>
+                    <h4 class="font-bold text-lutmin-dark text-base sm:text-lg mb-2"><i class="fa-solid fa-circle-question text-lutmin-light mr-2"></i> ¿Los cursos otorgan certificado oficial?</h4>
                     <p class="text-gray-600 text-sm pl-6">Sí, al finalizar y aprobar los módulos de cursado, emitimos un certificado digital con aval corporativo de Lutmin Consultora y validez en el área profesional correspondiente.</p>
                 </div>
                 <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                    <h4 class="font-bold text-lutmin-dark text-lg mb-2"><i class="fa-solid fa-circle-question text-lutmin-light mr-2"></i> ¿Las empresas pueden capacitar a su personal a medida?</h4>
+                    <h4 class="font-bold text-lutmin-dark text-base sm:text-lg mb-2"><i class="fa-solid fa-circle-question text-lutmin-light mr-2"></i> ¿Las empresas pueden capacitar a su personal a medida?</h4>
                     <p class="text-gray-600 text-sm pl-6">¡Por supuesto! Diseñamos planes in-company y programas específicos adaptados a las necesidades operativas y de liderazgo de cada organización en AR y PY.</p>
                 </div>
             </div>
@@ -524,63 +518,63 @@
     </section>
 
     <!-- 8. CONTACTO INTERACTIVO -->
-    <section id="contacto" class="py-24 bg-slate-50 border-t border-gray-200">
+    <section id="contacto" class="py-20 sm:py-24 bg-slate-50 border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row border border-gray-100">
                 
-                <div class="bg-lutmin-dark text-white p-12 lg:w-2/5 flex flex-col justify-between relative overflow-hidden">
+                <div class="bg-lutmin-dark text-white p-8 sm:p-12 lg:w-2/5 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute -top-24 -right-24 w-64 h-64 bg-lutmin-light/20 rounded-full blur-3xl"></div>
                     <div class="relative z-10">
-                        <h3 class="text-3xl font-extrabold mb-4">Iniciemos el cambio</h3>
-                        <p class="text-gray-300 mb-12">Comunicate con nosotros para inscribirte a un curso, subir tu CV o solicitar asesoramiento corporativo integral.</p>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold mb-4">Iniciemos el cambio</h3>
+                        <p class="text-gray-300 text-sm sm:text-base mb-8 lg:mb-12">Comunicate con nosotros para inscribirte a un curso, subir tu CV o solicitar asesoramiento corporativo integral.</p>
                         
                         <div class="space-y-6">
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-lutmin-light">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-lutmin-light flex-shrink-0">
                                     <i class="fa-solid fa-phone"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm text-gray-400">Teléfono</p>
-                                    <p class="font-semibold">+54 9 362 532 3824</p>
+                                    <p class="text-xs sm:text-sm text-gray-400">Teléfono</p>
+                                    <p class="font-semibold text-sm sm:text-base">+54 9 362 532 3824</p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-lutmin-light">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-lutmin-light flex-shrink-0">
                                     <i class="fa-solid fa-envelope"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm text-gray-400">Email</p>
-                                    <p class="font-semibold">info@lutmin.com.ar</p>
+                                    <p class="text-xs sm:text-sm text-gray-400">Email</p>
+                                    <p class="font-semibold text-sm sm:text-base">info@lutmin.com.ar</p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-lutmin-light">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-lutmin-light flex-shrink-0">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm text-gray-400">Ubicación</p>
-                                    <p class="font-semibold">Ruta Nacional 16 km 17,5</p>
+                                    <p class="text-xs sm:text-sm text-gray-400">Ubicación</p>
+                                    <p class="font-semibold text-sm sm:text-base">Ruta Nacional 16 km 17,5</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="p-12 lg:w-3/5 bg-white">
+                <div class="p-8 sm:p-12 lg:w-3/5 bg-white">
                     <form id="contact-form" onsubmit="enviarFormulario(event)" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre completo</label>
-                                <input type="text" id="nombre" required class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition">
+                                <input type="text" id="nombre" required class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition text-sm">
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-gray-700 mb-2">Correo electrónico</label>
-                                <input type="email" id="email" required class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition">
+                                <input type="email" id="email" required class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition text-sm">
                             </div>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Asunto / Área de Interés</label>
-                            <select id="asunto" class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition appearance-none">
+                            <select id="asunto" class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition appearance-none text-sm">
                                 <option>Consultoría Empresarial / ISO</option>
                                 <option>Inscripción a Cursos</option>
                                 <option>Enviar CV / Red de Talento</option>
@@ -590,9 +584,9 @@
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Mensaje</label>
-                            <textarea id="mensaje" rows="4" required class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition"></textarea>
+                            <textarea id="mensaje" rows="4" required class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition text-sm"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-lutmin-dark hover:bg-lutmin-light text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <button type="submit" class="w-full bg-lutmin-dark hover:bg-lutmin-light text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-base">
                             Enviar Solicitud
                         </button>
                     </form>
@@ -636,12 +630,12 @@
 
     <!-- 9. FOOTER -->
     <footer class="bg-lutmin-dark py-12 border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
             <div class="flex items-center">
                 <img src="LOGO.png" alt="Lutmin Consultora" class="h-16 lg:h-20 w-auto opacity-90 hover:opacity-100 transition">
             </div>
             <p class="text-gray-400 text-sm">&copy; 2026 Lutmin Consultora. Todos los derechos reservados.</p>
-            <div class="flex gap-6">
+            <div class="flex gap-6 justify-center">
                 <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-instagram"></i></a>
             </div>
@@ -668,7 +662,7 @@
             const selectAsunto = document.getElementById('asunto');
             selectAsunto.value = "Inscripción a Cursos";
             const mensajeInput = document.getElementById('mensaje');
-            mensajeInput.value = `Hola, me interesa obtener más información e inscribirse en el curso de: ${nombreCurso}.`;
+            mensajeInput.value = `Hola, me interesa obtener más información e inscribirme en el curso de: ${nombreCurso}.`;
             document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
         }
 
