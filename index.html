@@ -31,50 +31,50 @@
         body { font-family: 'Montserrat', sans-serif; }
     </style>
 </head>
-<!-- Fondo general gris ultra suave para evitar el "blanco raro" -->
 <body class="bg-slate-50 text-gray-800 antialiased overflow-x-hidden">
 
     <!-- BARRA DE NAVEGACIÓN -->
     <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
-            <!-- LOGO -->
+        <!-- Aumenté el padding (py-4) y quité la altura fija para que el logo mande en el tamaño -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+            <!-- LOGO: Altura aumentada (h-20 en celu, h-24 en compu) -->
             <a href="#inicio" class="flex items-center hover:opacity-90 transition">
-                <img src="LOGO.png" alt="Lutmin Consultora" class="h-16 w-auto object-contain">
+                <img src="LOGO.png" alt="Lutmin Consultora" class="h-20 lg:h-24 w-auto object-contain">
             </a>
 
-            <!-- MENÚ MEJORADO CON BOTONES SUTILES -->
-            <nav class="hidden md:flex items-center gap-2 font-semibold text-sm text-lutmin-dark">
-                <a href="#inicio" class="px-4 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all duration-300">Inicio</a>
-                <a href="#nosotros" class="px-4 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all duration-300">Nosotros</a>
-                <a href="#iso" class="px-4 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all duration-300">Normas ISO</a>
-                <a href="#tecnicos" class="px-4 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all duration-300">Área Técnica</a>
-                <a href="#gestion" class="px-4 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all duration-300">Área Gestión</a>
+            <!-- MENÚ -->
+            <nav class="hidden lg:flex items-center gap-1 font-semibold text-sm text-lutmin-dark">
+                <a href="#inicio" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Inicio</a>
+                <a href="#nosotros" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Nosotros</a>
+                <a href="#tecnicos" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Técnica e ISO</a>
+                <a href="#gestion" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Gestión</a>
+                <a href="#campus" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Campus</a>
+                <a href="#talento" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-lutmin-light transition-all">Talento</a>
             </nav>
 
             <!-- BOTÓN CTA -->
-            <a href="#contacto" class="hidden md:inline-block bg-lutmin-dark hover:bg-lutmin-light text-white text-sm font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-0.5">
-                Asesoría
+            <a href="#contacto" class="hidden md:inline-block bg-lutmin-dark hover:bg-lutmin-light text-white text-sm font-bold px-8 py-3 rounded-full shadow-md hover:shadow-lg transition duration-300">
+                Contacto
             </a>
             
-            <button class="md:hidden text-lutmin-dark text-2xl">
+            <button class="lg:hidden text-lutmin-dark text-2xl">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </header>
 
-    <!-- 1. SECCIÓN HERO (FONDO OFICINA + GRADIENTE CORREGIDO) -->
-    <section id="inicio" class="relative bg-lutmin-dark text-white min-h-screen flex items-center pt-24 overflow-hidden">
-        <!-- Imagen de Oficina (Reemplazada) -->
-        <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80');"></div>
+    <!-- 1. SECCIÓN HERO (Fondo corregido a oficina limpia y degradado suave) -->
+    <!-- Agregué pt-32 para compensar que el menú ahora es más alto por el logo -->
+    <section id="inicio" class="relative bg-lutmin-dark text-white min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+        <!-- Imagen de Oficina moderna y limpia -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1920&q=80');"></div>
         
-        <!-- Gradiente de izquierda a derecha (Soluciona la línea de corte abrupta) -->
-        <div class="absolute inset-0 bg-gradient-to-r from-lutmin-dark via-lutmin-dark/95 to-transparent w-full lg:w-3/4"></div>
-        
-        <!-- Gradiente inferior para móviles -->
+        <!-- Degradado suave: Más transparente para que no parezca un bloque azul gigante -->
+        <div class="absolute inset-0 bg-gradient-to-r from-lutmin-dark/95 via-lutmin-dark/60 to-transparent"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-lutmin-dark via-transparent to-transparent md:hidden"></div>
         
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 text-center lg:text-left flex flex-col lg:flex-row items-center">
-            <div class="lg:w-2/3 space-y-8 py-12">
+            <div class="lg:w-2/3 space-y-8">
                 <div class="inline-flex items-center gap-2 bg-lutmin-light/20 border border-lutmin-light/50 text-lutmin-light text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full backdrop-blur-sm">
                     <i class="fa-solid fa-lightbulb"></i> Claridad y Transformación
                 </div>
@@ -97,7 +97,7 @@
         </div>
     </section>
 
-    <!-- 2. SECCIÓN NOSOTROS (MISIÓN, VISIÓN Y VALORES INTEGRADOS) -->
+    <!-- 2. SECCIÓN NOSOTROS -->
     <section id="nosotros" class="py-24 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -107,7 +107,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Misión -->
                 <div class="bg-slate-50 p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
                     <div class="w-14 h-14 bg-lutmin-dark text-white rounded-2xl flex items-center justify-center text-xl mb-6 shadow-md">
                         <i class="fa-solid fa-bullseye"></i>
@@ -118,7 +117,6 @@
                     </p>
                 </div>
 
-                <!-- Visión -->
                 <div class="bg-slate-50 p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
                     <div class="w-14 h-14 bg-lutmin-light text-white rounded-2xl flex items-center justify-center text-xl mb-6 shadow-md">
                         <i class="fa-solid fa-eye"></i>
@@ -129,7 +127,6 @@
                     </p>
                 </div>
 
-                <!-- Valores -->
                 <div class="bg-lutmin-dark p-10 rounded-3xl shadow-xl text-white">
                     <div class="w-14 h-14 bg-white/10 text-lutmin-light rounded-2xl flex items-center justify-center text-xl mb-6 backdrop-blur-sm">
                         <i class="fa-solid fa-gem"></i>
@@ -159,7 +156,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Tarjeta 1: Implementación ISO -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 flex flex-col md:flex-row group border border-gray-100">
                     <div class="md:w-2/5 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="ISO 9001" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 min-h-[250px]">
@@ -172,7 +168,6 @@
                     </div>
                 </div>
 
-                <!-- Tarjeta 2: Auditoría -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 flex flex-col md:flex-row group border border-gray-100">
                     <div class="md:w-2/5 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80" alt="Auditoría" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 min-h-[250px]">
@@ -200,7 +195,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Refrigeración -->
                 <div class="bg-slate-50 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-2 group border border-gray-100">
                     <div class="relative h-56 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80" alt="Refrigeración" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
@@ -214,7 +208,6 @@
                     </div>
                 </div>
 
-                <!-- Electricidad -->
                 <div class="bg-slate-50 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-2 group border border-gray-100">
                     <div class="relative h-56 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Electricidad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
@@ -228,7 +221,6 @@
                     </div>
                 </div>
 
-                <!-- Plomería -->
                 <div class="bg-slate-50 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-2 group border border-gray-100">
                     <div class="relative h-56 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Plomería" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
@@ -258,7 +250,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Liderazgo -->
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl">
                     <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80" alt="Liderazgo" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
                     <div class="p-8">
@@ -271,7 +262,6 @@
                     </div>
                 </div>
 
-                <!-- Capital Humano -->
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl">
                     <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80" alt="Capital Humano" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
                     <div class="p-8">
@@ -284,7 +274,6 @@
                     </div>
                 </div>
 
-                <!-- Negociación -->
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500 shadow-xl">
                     <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" alt="Negociación" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
                     <div class="p-8">
@@ -300,17 +289,75 @@
         </div>
     </section>
 
-    <!-- 6. SECCIÓN CONTACTO (COMPLETA) -->
-    <section id="contacto" class="py-24 bg-gray-50">
+    <!-- 6. NUEVA SECCIÓN: CAMPUS VIRTUAL -->
+    <section id="campus" class="py-24 bg-lutmin-light/5 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-lg p-8 md:p-16 flex flex-col md:flex-row items-center gap-12 border border-lutmin-light/20">
+                <div class="md:w-1/2 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 bg-lutmin-light/10 text-lutmin-dark text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">
+                        <i class="fa-solid fa-laptop-code"></i> E-Learning
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-lutmin-dark">Campus Virtual Lutmin</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Accedé a tus clases en vivo, material de estudio y foros interactivos desde cualquier dispositivo. Nuestra plataforma está diseñada para que estudies a tu propio ritmo, 24/7.
+                    </p>
+                    <ul class="space-y-3 text-sm text-gray-600 font-medium pb-4 text-left inline-block md:block">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-lutmin-light mr-3"></i> Material didáctico actualizado</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-lutmin-light mr-3"></i> Acompañamiento docente online</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-lutmin-light mr-3"></i> Certificación digital inmediata</li>
+                    </ul>
+                    <a href="#" class="inline-block bg-lutmin-light hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-full shadow-md transition duration-300">
+                        Ingresar al Campus <i class="fa-solid fa-arrow-right-to-bracket ml-2"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Campus Virtual" class="rounded-2xl shadow-xl transform rotate-1 hover:rotate-0 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. NUEVA SECCIÓN: RED DE TALENTO -->
+    <section id="talento" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Bolsa de Empleo</span>
+            <h2 class="text-4xl font-extrabold text-lutmin-dark mb-4">Red de Talento Lutmin</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-12">
+                Conectamos a nuestros egresados con las mejores empresas de la región. Si te formaste con nosotros, formás parte de nuestra base de datos prioritaria.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-slate-50 p-10 rounded-3xl border border-gray-200 hover:border-lutmin-light transition duration-300 group">
+                    <div class="w-16 h-16 mx-auto bg-white text-lutmin-dark rounded-full flex items-center justify-center text-2xl mb-6 shadow-md group-hover:scale-110 transition">
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-lutmin-dark mb-3">Soy Profesional</h3>
+                    <p class="text-gray-600 text-sm mb-6">Cargá tu CV y postulate a las búsquedas vigentes gestionadas por nuestra consultora.</p>
+                    <a href="#contacto" class="text-lutmin-light font-bold hover:underline">Subir mi CV &rarr;</a>
+                </div>
+                
+                <div class="bg-lutmin-dark p-10 rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 group text-white">
+                    <div class="w-16 h-16 mx-auto bg-white/10 text-lutmin-light rounded-full flex items-center justify-center text-2xl mb-6 shadow-md group-hover:scale-110 transition">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Soy Empresa</h3>
+                    <p class="text-gray-300 text-sm mb-6">Encontrá el perfil exacto que tu organización necesita con nuestro servicio de reclutamiento.</p>
+                    <a href="#contacto" class="text-lutmin-light font-bold hover:underline">Solicitar personal &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SECCIÓN CONTACTO -->
+    <section id="contacto" class="py-24 bg-gray-50 border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row border border-gray-100">
                 
-                <!-- Info de Contacto -->
                 <div class="bg-lutmin-dark text-white p-12 lg:w-2/5 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute -top-24 -right-24 w-64 h-64 bg-lutmin-light/20 rounded-full blur-3xl"></div>
                     <div class="relative z-10">
                         <h3 class="text-3xl font-extrabold mb-4">Iniciemos el cambio</h3>
-                        <p class="text-gray-300 mb-12">Comunicate con nosotros para inscribirte a un curso o solicitar asesoramiento corporativo personalizado.</p>
+                        <p class="text-gray-300 mb-12">Comunicate con nosotros para inscribirte a un curso, subir tu CV o solicitar asesoramiento corporativo.</p>
                         
                         <div class="space-y-6">
                             <div class="flex items-center gap-4">
@@ -344,7 +391,6 @@
                     </div>
                 </div>
                 
-                <!-- Formulario -->
                 <div class="p-12 lg:w-3/5 bg-white">
                     <form class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -360,10 +406,11 @@
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Asunto / Área de Interés</label>
                             <select class="w-full px-5 py-4 bg-slate-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition appearance-none">
-                                <option>Normas ISO (Implementación / Auditoría)</option>
-                                <option>Cursos Técnicos y Oficios</option>
-                                <option>Área Gestión y Liderazgo</option>
+                                <option>Inscripción a Cursos</option>
                                 <option>Consultoría Empresarial</option>
+                                <option>Enviar CV / Búsqueda Laboral</option>
+                                <option>Acceso al Campus Virtual</option>
+                                <option>Otra consulta</option>
                             </select>
                         </div>
                         <div>
@@ -379,11 +426,11 @@
         </div>
     </section>
 
-    <!-- 7. FOOTER -->
+    <!-- 9. FOOTER -->
     <footer class="bg-lutmin-dark py-12 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center">
-                <img src="LOGO.png" alt="Lutmin Consultora" class="h-12 w-auto opacity-80 hover:opacity-100 transition">
+                <img src="LOGO.png" alt="Lutmin Consultora" class="h-16 lg:h-20 w-auto opacity-90 hover:opacity-100 transition">
             </div>
             <p class="text-gray-400 text-sm">&copy; 2026 Lutmin Consultora. Todos los derechos reservados.</p>
             <div class="flex gap-6">
