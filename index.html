@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lutmin Consultora | Capacitaciones y Desarrollo Organizacional</title>
     
-    <!-- FAVICON (El loguito de Lutmin en la pestaña del navegador) -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="LOGO.png">
 
     <!-- Tailwind CSS -->
@@ -67,11 +67,11 @@
                 <a href="#faq" class="px-3.5 py-2 rounded-xl hover:bg-lutmin-light/10 hover:text-lutmin-light transition-all flex items-center gap-1.5"><i class="fa-solid fa-circle-question text-xs opacity-70"></i> FAQ</a>
             </nav>
 
-            <!-- BOTÓN ACCESO CAMPUS -->
+            <!-- BOTÓN ACCESO CAMPUS (VINCULADO A LA RAÍZ DE VERCEL) -->
             <div class="hidden md:flex items-center gap-3">
-                <button onclick="abrirModalCampus()" class="bg-lutmin-dark hover:bg-lutmin-light text-white text-xs sm:text-sm font-bold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-lg transition duration-300 flex items-center gap-2">
+                <a href="https://lutmin-cursos.vercel.app/" target="_blank" class="bg-lutmin-dark hover:bg-lutmin-light text-white text-xs sm:text-sm font-bold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-lg transition duration-300 flex items-center gap-2">
                     <i class="fa-solid fa-key text-xs"></i> Acceso Campus
-                </button>
+                </a>
             </div>
             
             <!-- BOTÓN MENÚ MÓVIL -->
@@ -88,7 +88,7 @@
             <a href="#cursos" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1 text-base"><i class="fa-solid fa-graduation-cap mr-2 text-lutmin-light"></i> Cursos y Capacitaciones</a>
             <a href="#talento" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1 text-base"><i class="fa-solid fa-id-card-clip mr-2 text-lutmin-light"></i> Red de Talento</a>
             <a href="#faq" class="block font-semibold text-lutmin-dark hover:text-lutmin-light py-1 text-base"><i class="fa-solid fa-circle-question mr-2 text-lutmin-light"></i> FAQ</a>
-            <button onclick="abrirModalCampus()" class="w-full text-center bg-lutmin-dark text-white font-bold py-3 rounded-full mt-4 text-sm shadow-md">Acceso Campus</button>
+            <a href="https://lutmin-cursos.vercel.app/" target="_blank" class="block text-center bg-lutmin-dark text-white font-bold py-3 rounded-full mt-4 text-sm shadow-md">Acceso Campus</a>
         </div>
     </header>
 
@@ -612,39 +612,6 @@
         </div>
     </section>
 
-    <!-- MODAL INTERACTIVO DE ACCESO AL CAMPUS VIRTUAL -->
-    <div id="campus-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl relative space-y-6">
-            <button onclick="cerrarModalCampus()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-700 text-xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="text-center">
-                <div class="w-16 h-16 bg-lutmin-light/10 text-lutmin-light rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-lutmin-dark">Campus Virtual Lutmin</h3>
-                <p class="text-gray-500 text-xs mt-1">Ingresá con tus credenciales de alumno o docente</p>
-            </div>
-            
-            <form onsubmit="simularLogin(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Usuario / Email</label>
-                    <input type="text" required class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-lutmin-light">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Contraseña</label>
-                    <input type="password" required class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-lutmin-light">
-                </div>
-                <button type="submit" class="w-full bg-lutmin-dark hover:bg-lutmin-light text-white font-bold py-3.5 rounded-xl transition text-sm shadow-md">
-                    Iniciar Sesión
-                </button>
-            </form>
-            <div class="text-center">
-                <a href="#contacto" onclick="cerrarModalCampus()" class="text-xs text-lutmin-light font-semibold hover:underline">¿Problemas para acceder? Contactar soporte</a>
-            </div>
-        </div>
-    </div>
-
     <!-- 9. FOOTER -->
     <footer class="bg-lutmin-dark py-12 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
@@ -679,7 +646,7 @@
             const selectAsunto = document.getElementById('asunto');
             selectAsunto.value = "Inscripción a Cursos";
             const mensajeInput = document.getElementById('mensaje');
-            mensajeInput.value = `Hola, me interesa obtener más información e inscribirme en el curso de: ${nombreCurso}.`;
+            mensajeInput.value = `Hola, me interesa obtener más información e inscribirse en el curso de: ${nombreCurso}.`;
             document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -699,20 +666,6 @@
             const nombre = document.getElementById('nombre').value;
             alert(`¡Muchas gracias ${nombre}! Tu solicitud ha sido enviada con éxito. Nos pondremos en contacto a la brevedad.`);
             document.getElementById('contact-form').reset();
-        }
-
-        function abrirModalCampus() {
-            document.getElementById('campus-modal').classList.remove('hidden');
-        }
-
-        function cerrarModalCampus() {
-            document.getElementById('campus-modal').classList.add('hidden');
-        }
-
-        function simularLogin(event) {
-            event.preventDefault();
-            alert("Conectando con la plataforma del Campus Virtual...");
-            cerrarModalCampus();
         }
     </script>
 
