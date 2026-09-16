@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lutmin Consultora | Capacitaciones</title>
+    <title>Lutmin Consultora | Capacitaciones y Desarrollo</title>
     
-    <!-- Tailwind CSS con tus colores oficiales -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -19,171 +19,167 @@
                     },
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
-                        heavy: ['Montserrat', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         body { font-family: 'Montserrat', sans-serif; }
-        .font-heavy { font-weight: 800; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden">
 
     <!-- BARRA DE NAVEGACIÓN -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- LOGO: Aquí va tu imagen -->
-            <a href="#inicio" class="flex items-center">
-                <!-- Si tienes el logo sin fondo (PNG), pon el nombre del archivo aquí en el src -->
-                <!-- Por ahora, dejo un texto estilizado simulando tu logo por si la imagen falla -->
-                <div class="flex flex-col">
-                    <div class="flex items-center gap-1 font-heavy text-3xl tracking-tight text-lutmin-dark">
-                        L<span class="text-lutmin-light">u</span>tmin
-                    </div>
-                    <span class="text-[11px] font-semibold text-lutmin-dark tracking-[0.2em] -mt-1">consultora</span>
-                </div>
+    <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+            <!-- LOGO OFICIAL -->
+            <a href="#inicio" class="flex items-center hover:opacity-90 transition">
+                <img src="LOGO.png" alt="Lutmin Consultora" class="h-16 w-auto object-contain">
             </a>
 
             <!-- MENÚ -->
-            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-gray-600">
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-lutmin-dark">
                 <a href="#inicio" class="hover:text-lutmin-light transition">Inicio</a>
-                <a href="#cursos" class="hover:text-lutmin-light transition">Capacitaciones</a>
+                <a href="#nosotros" class="hover:text-lutmin-light transition">Nosotros</a>
+                <a href="#tecnicos" class="hover:text-lutmin-light transition">Área Técnica</a>
+                <a href="#gestion" class="hover:text-lutmin-light transition">Área Gestión</a>
                 <a href="#contacto" class="hover:text-lutmin-light transition">Contacto</a>
             </nav>
 
-            <!-- BOTÓN -->
-            <a href="#contacto" class="bg-lutmin-dark hover:bg-lutmin-light text-white text-sm font-bold px-6 py-2.5 rounded-full shadow-md transition duration-300">
-                Consultar
+            <!-- BOTÓN CTA -->
+            <a href="#contacto" class="hidden md:inline-block bg-lutmin-dark hover:bg-lutmin-light text-white text-sm font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-0.5">
+                Asesoría
             </a>
+            
+            <!-- Menú móvil (Icono) -->
+            <button class="md:hidden text-lutmin-dark text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 
-    <!-- SECCIÓN HERO (PORTADA TIPO FUNDACIÓN 40) -->
-    <section id="inicio" class="relative bg-black text-white h-[80vh] min-h-[600px] flex items-center">
-        <!-- Imagen de fondo -->
-        <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80');"></div>
-        <!-- Gradiente para que el texto resalte (usando tu azul oscuro) -->
-        <div class="absolute inset-0 bg-gradient-to-r from-lutmin-dark/90 to-transparent"></div>
+    <!-- 1. SECCIÓN HERO (PORTADA PRINCIPAL) -->
+    <section id="inicio" class="relative bg-lutmin-dark text-white min-h-screen flex items-center pt-24">
+        <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-lutmin-dark via-lutmin-dark/80 to-transparent"></div>
         
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="max-w-2xl space-y-6">
-                <span class="bg-lutmin-light text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Lutmin Consultora</span>
-                <h1 class="font-heavy text-5xl sm:text-7xl leading-tight">
-                    Potenciá el <br><span class="text-lutmin-light">talento</span> humano
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 text-center lg:text-left flex flex-col lg:flex-row items-center">
+            <div class="lg:w-2/3 space-y-8">
+                <div class="inline-flex items-center gap-2 bg-lutmin-light/20 border border-lutmin-light/50 text-lutmin-light text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full backdrop-blur-sm">
+                    <i class="fa-solid fa-lightbulb"></i> Claridad y Transformación
+                </div>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight text-white">
+                    Desarrollamos el <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-lutmin-light to-blue-200">talento de tu organización</span>
                 </h1>
-                <p class="text-lg text-gray-200">
-                    Formación técnica y de liderazgo para optimizar procesos y construir culturas organizacionales de excelencia.
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl leading-relaxed font-light mx-auto lg:mx-0">
+                    Acompañamos a las empresas en la construcción de entornos de trabajo más humanos y eficientes, integrando herramientas de gestión, análisis y liderazgo.
                 </p>
-                <div class="pt-4">
-                    <a href="#cursos" class="bg-lutmin-light hover:bg-blue-400 text-white font-bold px-8 py-4 rounded-full shadow-lg transition duration-300 inline-block">
-                        Ver Cursos Disponibles
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                    <a href="#tecnicos" class="bg-lutmin-light hover:bg-blue-400 text-white font-bold px-10 py-4 rounded-full shadow-[0_0_20px_rgba(47,141,253,0.4)] transition duration-300 text-center">
+                        Explorar Cursos
+                    </a>
+                    <a href="#contacto" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-10 py-4 rounded-full backdrop-blur-md transition duration-300 text-center">
+                        Contactarnos
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN: CURSOS TÉCNICOS (CON IMÁGENES) -->
-    <section id="cursos" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mb-12">
-            <h2 class="font-heavy text-4xl text-lutmin-dark mb-4">Cursos Técnicos</h2>
-            <div class="w-20 h-1.5 bg-lutmin-light rounded-full"></div>
-            <p class="mt-4 text-gray-600">Enfoque práctico en herramientas duras, análisis de datos, sistemas y procesos.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Curso Técnico 1 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Análisis de Datos" class="w-full h-56 object-cover">
-                <div class="p-6 flex flex-col h-full">
-                    <span class="text-lutmin-light font-bold text-xs uppercase mb-2">8 Semanas</span>
-                    <h3 class="font-heavy text-xl text-lutmin-dark mb-3">Estadística Aplicada y Analítica</h3>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">Dominio de herramientas estadísticas para la toma de decisiones basada en datos reales.</p>
-                    <a href="#contacto" class="w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-2.5 rounded-full transition">
-                        Ver más
-                    </a>
-                </div>
-            </div>
-
-            <!-- Curso Técnico 2 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Procesos" class="w-full h-56 object-cover">
-                <div class="p-6 flex flex-col h-full">
-                    <span class="text-lutmin-light font-bold text-xs uppercase mb-2">6 Semanas</span>
-                    <h3 class="font-heavy text-xl text-lutmin-dark mb-3">Optimización de Procesos</h3>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">Metodologías de control, eficiencia y automatización de flujos de trabajo corporativos.</p>
-                    <a href="#contacto" class="w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-2.5 rounded-full transition">
-                        Ver más
-                    </a>
-                </div>
-            </div>
-
-            <!-- Curso Técnico 3 -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
-                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80" alt="Sistemas" class="w-full h-56 object-cover">
-                <div class="p-6 flex flex-col h-full">
-                    <span class="text-lutmin-light font-bold text-xs uppercase mb-2">10 Semanas</span>
-                    <h3 class="font-heavy text-xl text-lutmin-dark mb-3">Gestión de Proyectos</h3>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">Implementación de marcos de trabajo técnicos y control de entregables de software.</p>
-                    <a href="#contacto" class="w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-2.5 rounded-full transition">
-                        Ver más
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN: GESTIÓN Y LIDERAZGO (CON IMÁGENES) -->
-    <section class="py-20 bg-gray-100">
+    <!-- 2. SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12">
-                <h2 class="font-heavy text-4xl text-lutmin-dark mb-4">Gestión y Liderazgo</h2>
-                <div class="w-20 h-1.5 bg-lutmin-light rounded-full"></div>
-                <p class="mt-4 text-gray-600">Desarrollo de habilidades directivas, inteligencia emocional y conducción de equipos.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Equipo" class="rounded-3xl shadow-2xl relative z-10">
+                    <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-lutmin-light/10 rounded-full blur-3xl"></div>
+                </div>
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-extrabold text-lutmin-dark tracking-tight">Nuestra Visión</h2>
+                    <div class="w-24 h-1.5 bg-lutmin-light rounded-full"></div>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Convertirnos en la consultora referente para la transformación organizacional humana y eficiente. 
+                        Aspiramos a que cada cliente de Lutmin evolucione hacia un entorno laboral donde las personas crezcan, los equipos brillen y los logros estratégicos sean sostenibles.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 pt-8">
+                        <div class="border-l-4 border-lutmin-light pl-4">
+                            <h4 class="text-3xl font-extrabold text-lutmin-dark">+100</h4>
+                            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider mt-1">Empresas Asesoradas</p>
+                        </div>
+                        <div class="border-l-4 border-lutmin-dark pl-4">
+                            <h4 class="text-3xl font-extrabold text-lutmin-dark">100%</h4>
+                            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider mt-1">Enfoque Humano</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECCIÓN CURSOS TÉCNICOS -->
+    <section id="tecnicos" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Formación Especializada</span>
+                    <h2 class="text-4xl font-extrabold text-lutmin-dark">Área Técnica</h2>
+                    <p class="mt-4 text-gray-600 text-lg">Programas enfocados en herramientas duras, análisis de datos y optimización de procesos operativos.</p>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Curso Gestión 1 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80" alt="Liderazgo" class="w-full h-56 object-cover">
-                    <div class="p-6 flex flex-col h-full">
-                        <span class="text-lutmin-light font-bold text-xs uppercase mb-2">6 Semanas</span>
-                        <h3 class="font-heavy text-xl text-lutmin-dark mb-3">Liderazgo Estratégico</h3>
-                        <p class="text-gray-600 text-sm mb-6 flex-grow">Herramientas para inspirar, alinear y guiar equipos de alto rendimiento hacia metas claras.</p>
-                        <a href="#contacto" class="w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-2.5 rounded-full transition">
-                            Ver más
+                <!-- Tarjeta 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Datos" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-lutmin-dark font-bold text-xs uppercase px-4 py-2 rounded-full shadow-sm">
+                            8 Semanas
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-lutmin-dark mb-3">Estadística Aplicada y Analítica</h3>
+                        <p class="text-gray-600 mb-8 line-clamp-3">Dominio de herramientas estadísticas para la toma de decisiones basada en datos reales y comprobables.</p>
+                        <a href="#contacto" class="inline-flex items-center text-lutmin-light font-bold hover:text-lutmin-dark transition">
+                            Inscribirme <i class="fa-solid fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Curso Gestión 2 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80" alt="Capital Humano" class="w-full h-56 object-cover">
-                    <div class="p-6 flex flex-col h-full">
-                        <span class="text-lutmin-light font-bold text-xs uppercase mb-2">8 Semanas</span>
-                        <h3 class="font-heavy text-xl text-lutmin-dark mb-3">Analista en Capital Humano</h3>
-                        <p class="text-gray-600 text-sm mb-6 flex-grow">Gestión integral del talento, clima laboral, selección de personal y desarrollo organizacional.</p>
-                        <a href="#contacto" class="w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-2.5 rounded-full transition">
-                            Ver más
+                <!-- Tarjeta 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Procesos" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-lutmin-dark font-bold text-xs uppercase px-4 py-2 rounded-full shadow-sm">
+                            6 Semanas
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-lutmin-dark mb-3">Optimización de Procesos</h3>
+                        <p class="text-gray-600 mb-8 line-clamp-3">Metodologías de control, eficiencia y automatización de flujos de trabajo en empresas de todos los tamaños.</p>
+                        <a href="#contacto" class="inline-flex items-center text-lutmin-light font-bold hover:text-lutmin-dark transition">
+                            Inscribirme <i class="fa-solid fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Curso Gestión 3 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" alt="Negociación" class="w-full h-56 object-cover">
-                    <div class="p-6 flex flex-col h-full">
-                        <span class="text-lutmin-light font-bold text-xs uppercase mb-2">4 Semanas</span>
-                        <h3 class="font-heavy text-xl text-lutmin-dark mb-3">Resolución de Conflictos</h3>
-                        <p class="text-gray-600 text-sm mb-6 flex-grow">Técnicas avanzadas de comunicación persuasiva, acuerdos y manejo de crisis corporativas.</p>
-                        <a href="#contacto" class="w-full text-center border-2 border-lutmin-dark text-lutmin-dark hover:bg-lutmin-dark hover:text-white font-bold py-2.5 rounded-full transition">
-                            Ver más
+                <!-- Tarjeta 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80" alt="Sistemas" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-lutmin-dark font-bold text-xs uppercase px-4 py-2 rounded-full shadow-sm">
+                            10 Semanas
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-lutmin-dark mb-3">Gestión de Proyectos Tech</h3>
+                        <p class="text-gray-600 mb-8 line-clamp-3">Implementación de marcos de trabajo técnicos ágiles y control de entregables en equipos de tecnología.</p>
+                        <a href="#contacto" class="inline-flex items-center text-lutmin-light font-bold hover:text-lutmin-dark transition">
+                            Inscribirme <i class="fa-solid fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
@@ -191,31 +187,186 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CONTACTO -->
-    <section id="contacto" class="py-20 bg-lutmin-dark text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="font-heavy text-4xl mb-6">¿Listo para potenciar tu equipo?</h2>
-            <p class="text-lg text-gray-300 mb-10">Dejanos tus datos y nos pondremos en contacto para asesorarte.</p>
-            
-            <form class="bg-white rounded-2xl p-8 max-w-2xl mx-auto text-left shadow-2xl">
-                <div class="space-y-4">
-                    <input type="text" placeholder="Nombre completo" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light">
-                    <input type="email" placeholder="Correo electrónico" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light">
-                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:border-lutmin-light bg-white">
-                        <option>Consultar por Cursos Técnicos</option>
-                        <option>Consultar por Cursos de Gestión</option>
-                    </select>
-                    <button class="w-full bg-lutmin-light hover:bg-blue-500 text-white font-bold py-4 rounded-lg transition duration-300">
-                        Enviar Consulta
-                    </button>
+    <!-- 4. SECCIÓN CURSOS GESTIÓN Y LIDERAZGO -->
+    <section id="gestion" class="py-24 bg-lutmin-dark text-white relative overflow-hidden">
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-lutmin-light/10 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <span class="text-lutmin-light font-bold tracking-widest uppercase text-sm mb-2 block">Habilidades Blandas</span>
+                    <h2 class="text-4xl font-extrabold text-white">Área Gestión y Liderazgo</h2>
+                    <p class="mt-4 text-gray-300 text-lg">Desarrollo de habilidades directivas, inteligencia emocional y conducción estratégica de equipos.</p>
                 </div>
-            </form>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80" alt="Liderazgo" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
+                    <div class="p-8">
+                        <div class="text-lutmin-light font-bold text-xs uppercase mb-3 tracking-wider">6 Semanas</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Liderazgo Estratégico</h3>
+                        <p class="text-gray-300 mb-6 text-sm">Herramientas para inspirar, alinear y guiar equipos de alto rendimiento hacia metas claras.</p>
+                        <a href="#contacto" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
+                            Consultar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80" alt="Capital Humano" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
+                    <div class="p-8">
+                        <div class="text-lutmin-light font-bold text-xs uppercase mb-3 tracking-wider">8 Semanas</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Analista en Capital Humano</h3>
+                        <p class="text-gray-300 mb-6 text-sm">Gestión integral del talento, clima laboral, selección de personal y desarrollo organizacional.</p>
+                        <a href="#contacto" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
+                            Consultar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" alt="Negociación" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition">
+                    <div class="p-8">
+                        <div class="text-lutmin-light font-bold text-xs uppercase mb-3 tracking-wider">4 Semanas</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Resolución de Conflictos</h3>
+                        <p class="text-gray-300 mb-6 text-sm">Técnicas avanzadas de comunicación persuasiva, acuerdos y manejo de crisis corporativas.</p>
+                        <a href="#contacto" class="block w-full text-center bg-white text-lutmin-dark hover:bg-lutmin-light hover:text-white font-bold py-3 rounded-full transition">
+                            Consultar
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-black py-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-        <p>&copy; 2026 Lutmin Consultora. Todos los derechos reservados.</p>
+    <!-- 5. SECCIÓN VALORES -->
+    <section class="py-20 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-lutmin-dark mb-12">Los Pilares de Lutmin Consultora</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-lutmin-light/10 text-lutmin-light rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-regular fa-lightbulb"></i>
+                    </div>
+                    <h4 class="font-bold text-lutmin-dark">Claridad</h4>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-lutmin-light/10 text-lutmin-light rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h4 class="font-bold text-lutmin-dark">Humanidad</h4>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-lutmin-light/10 text-lutmin-light rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h4 class="font-bold text-lutmin-dark">Innovación</h4>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-lutmin-light/10 text-lutmin-light rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h4 class="font-bold text-lutmin-dark">Compromiso</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECCIÓN CONTACTO (COMPLETA) -->
+    <section id="contacto" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
+                
+                <!-- Info de Contacto -->
+                <div class="bg-lutmin-dark text-white p-12 lg:w-2/5 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -top-24 -right-24 w-64 h-64 bg-lutmin-light/20 rounded-full blur-3xl"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-extrabold mb-4">Iniciemos el cambio</h3>
+                        <p class="text-gray-300 mb-12">Comunicate con nosotros para inscribirte a un curso o solicitar asesoramiento corporativo personalizado.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-lutmin-light">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Teléfono</p>
+                                    <p class="font-semibold">+54 9 362 532 3824</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-lutmin-light">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Email</p>
+                                    <p class="font-semibold">info@lutmin.com.ar</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-lutmin-light">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Ubicación</p>
+                                    <p class="font-semibold">Ruta Nacional 16 km 17,5</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulario -->
+                <div class="p-12 lg:w-3/5 bg-white">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre completo</label>
+                                <input type="text" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Correo electrónico</label>
+                                <input type="email" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Asunto / Área de Interés</label>
+                            <select class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition appearance-none">
+                                <option>Inscripción: Área Técnica</option>
+                                <option>Inscripción: Área Gestión</option>
+                                <option>Consultoría para Empresas</option>
+                                <option>Otra consulta</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Mensaje</label>
+                            <textarea rows="4" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lutmin-light focus:ring-1 focus:ring-lutmin-light transition"></textarea>
+                        </div>
+                        <button class="w-full bg-lutmin-dark hover:bg-lutmin-light text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER -->
+    <footer class="bg-lutmin-dark py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center">
+                <img src="LOGO.png" alt="Lutmin Consultora" class="h-12 w-auto opacity-80 hover:opacity-100 transition">
+            </div>
+            <p class="text-gray-400 text-sm">&copy; 2026 Lutmin Consultora. Todos los derechos reservados.</p>
+            <div class="flex gap-6">
+                <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
 
 </body>
