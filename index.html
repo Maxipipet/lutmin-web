@@ -29,10 +29,17 @@
     
     <style>
         body { font-family: 'Montserrat', sans-serif; }
-        /* Clase personalizada para unificar el tamaño de todos los logos corporativos */
+        /* Contenedor uniforme para equilibrar todos los logos sin deformarlos */
+        .logo-wrapper {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .logo-aliado {
-            height: 40px;
-            max-width: 130px;
+            max-height: 50px;
+            max-width: 140px;
+            width: auto;
             object-fit: contain;
             transition: all 0.3s ease;
         }
@@ -40,7 +47,7 @@
 </head>
 <body class="bg-slate-50 text-gray-800 antialiased overflow-x-hidden">
 
-    <!-- BARRA DE NAVEGACIÓN REDISEÑADA Y ELEGANTE -->
+    <!-- BARRA DE NAVEGACIÓN -->
     <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
             <!-- LOGO -->
@@ -48,8 +55,8 @@
                 <img src="LOGO.png" alt="Lutmin Consultora" class="h-16 sm:h-20 lg:h-24 w-auto object-contain">
             </a>
 
-            <!-- MENÚ ESCRITORIO MEJORADO CON ICONOS Y ESTILO PREMIUM -->
-            <nav class="hidden lg:flex items-center gap-2 font-semibold text-xs sm:text-sm text-lutmin-dark">
+            <!-- MENÚ ESCRITORIO -->
+            <nav class="hidden lg:flex items-center gap-1 font-semibold text-xs sm:text-sm text-lutmin-dark">
                 <a href="#inicio" class="px-3.5 py-2 rounded-xl hover:bg-lutmin-light/10 hover:text-lutmin-light transition-all flex items-center gap-1.5"><i class="fa-solid fa-house text-xs opacity-70"></i> Inicio</a>
                 <a href="#nosotros" class="px-3.5 py-2 rounded-xl hover:bg-lutmin-light/10 hover:text-lutmin-light transition-all flex items-center gap-1.5"><i class="fa-solid fa-users-viewfinder text-xs opacity-70"></i> Nosotros</a>
                 <a href="#servicios-b2b" class="px-3.5 py-2 rounded-xl hover:bg-lutmin-light/10 hover:text-lutmin-light transition-all flex items-center gap-1.5"><i class="fa-solid fa-briefcase text-xs opacity-70"></i> Servicios Empresas</a>
@@ -65,7 +72,7 @@
                 </button>
             </div>
             
-            <!-- BOTÓN MENÚ MÓVIL (HAMBURGUESA) -->
+            <!-- BOTÓN MENÚ MÓVIL -->
             <button id="menu-btn" class="lg:hidden text-lutmin-dark text-2xl focus:outline-none p-2">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -134,16 +141,16 @@
         </div>
     </section>
 
-    <!-- ALIANZAS CON TAMAÑOS HOMOGÉNEOS (LOGOS UNIFICADOS) -->
+    <!-- ALIANZAS CON LOGOS PERFECTAMENTE NIVELADOS Y CORRECTOS (QA) -->
     <section class="py-16 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">Organizaciones y aliados que confían en nuestra trayectoria</p>
-            <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 md:gap-16 opacity-80">
-                <img src="LOGOEX.png" alt="EX" class="logo-aliado hover:opacity-100">
-                <img src="LOGOOA.jpeg" alt="OA" class="logo-aliado hover:opacity-100">
-                <img src="LOGOSE.png" alt="SE" class="logo-aliado hover:opacity-100">
-                <img src="LOGOSX.jpeg" alt="SX" class="logo-aliado hover:opacity-100">
-                <img src="LOGOWA.png" alt="WA" class="logo-aliado hover:opacity-100">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-85">
+                <div class="logo-wrapper"><img src="LOGOEX.png" alt="EX" class="logo-aliado hover:opacity-100"></div>
+                <div class="logo-wrapper"><img src="LOGOQA.jpeg" alt="QA" class="logo-aliado hover:opacity-100"></div>
+                <div class="logo-wrapper"><img src="LOGOSE.png" alt="SE" class="logo-aliado hover:opacity-100"></div>
+                <div class="logo-wrapper"><img src="LOGOSX.jpeg" alt="SX" class="logo-aliado hover:opacity-100"></div>
+                <div class="logo-wrapper"><img src="LOGOWA.png" alt="WA" class="logo-aliado hover:opacity-100"></div>
             </div>
         </div>
     </section>
